@@ -1,0 +1,15 @@
+.content {
+  background: #0a6897 url(./images/bg.jpg) no-repeat center / 100% 100%;
+  position: relative;
+  display: block;
+  overflow-y: auto;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}

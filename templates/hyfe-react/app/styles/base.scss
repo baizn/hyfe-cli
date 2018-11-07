@@ -1,0 +1,174 @@
+/*
+    公用样式文件，可以分文件
+*/
+// @import '~antd/dist/antd.css';
+@import '~react-grid-layout/css/styles.css';
+@import '~react-resizable/css/styles.css';
+
+$green: #4db14d;
+
+html {
+  box-sizing: border-box;
+  font: 18pt 'Oswald';
+  letter-spacing: 0.05em;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.app {
+  background: none;
+  height: 100%;
+}
+
+.content {
+  height: calc(100% - 84px);
+}
+
+.footer {
+  background: none;
+  text-align: center;
+}
+
+.no-data {
+  color: #ffffff;
+}
+
+@keyframes start {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes box-left {
+  0% {
+    left: 0;
+    right: 0;
+    transform: scale(0.1);
+  }
+  70% {
+    transform: scale(0.1);
+    left: -65%;
+  }
+  100% {
+    transform: scale(1);
+    left: -65%;
+  }
+}
+
+@keyframes box-right {
+  0% {
+    left: 0;
+    right: 0;
+    transform: scale(0.1);
+  }
+  70% {
+    transform: scale(0.1);
+    right: -65%;
+  }
+  100% {
+    transform: scale(1);
+    right: -65%;
+  }
+}
+
+@keyframes pj-menu {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes pd-pie-show {
+  0% {
+    top: -2000px;
+    transform: scale(0.05);
+  }
+  40% {
+    top: 0;
+    transform: scale(0.05);
+  }
+  100% {
+    top: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pj-item {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes outer-pie-menu-active {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes outer-pie-menu-active-2 {
+  0% {
+    transform: scale(1) rotate(90deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(90deg);
+  }
+}
+
+@keyframes outer-pie-menu-active-3 {
+  0% {
+    transform: scale(1) rotate(180deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(180deg);
+  }
+}
+
+@keyframes outer-pie-menu-active-4 {
+  0% {
+    transform: scale(1) rotate(270deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(270deg);
+  }
+}

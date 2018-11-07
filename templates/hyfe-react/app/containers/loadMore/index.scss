@@ -1,0 +1,25 @@
+.load-more {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+
+  .load-btn {
+    margin-top: 40px;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+
+    &:hover {
+      color: #00c1de;
+      border-color: #00c1de;
+    }
+  }
+}
+
+.no-data {
+  line-height: 40px;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 100px;
+}

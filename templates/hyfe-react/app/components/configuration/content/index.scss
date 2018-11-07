@@ -1,0 +1,13 @@
+.content-container {
+  width: 75%;
+  height: 100%;
+  background: #F0F2F5;
+  overflow-y: auto;
+  .content-wrapper {
+    width: 92%;
+    margin: 32px auto;
+    padding: 32px 48px;
+    box-sizing: border-box;
+    background: #FFF;
+  }
+}

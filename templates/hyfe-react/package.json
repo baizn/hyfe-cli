@@ -1,0 +1,64 @@
+{
+  "name": "generator-hyfe-react",
+  "version": "1.0.0",
+  "description": "generator-hyfe-react",
+  "keywords": [
+    "react",
+    "redux",
+    "redux-saga",
+    "webpack",
+    "react-router",
+    "d3",
+    "hyfe",
+    "generator-hyfe"
+  ],
+  "license": "GPL",
+  "engines": {
+    "node": ">=4.5.0",
+    "yarn": ">=0.20.3",
+    "npm": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.5.11/hyfe/generator-hyfe-react"
+  },
+  "scripts": {
+    "clean": "rimraf dist && rimraf lib",
+    "compile": "node build/scripts/compile",
+    "analysis": "webpack --config ./build/config/webpack.config.js --profile --json > stats.json",
+    "dll": "webpack --config build/config/webpack.lib.js --colors",
+    "start": "node build/scripts/dev-server --ignore dist --ignore coverage --ignore src",
+    "deploy": "npm run clean && npm run dll && npm run compile",
+    "deploy:dev": "better-npm-run deploy:dev",
+    "deploy:prod": "better-npm-run deploy:prod"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": "lint:code",
+    "src/**/*.{scss,css}": "lint:style"
+  },
+  "betterScripts": {
+    "deploy:dev": {
+      "command": "npm run deploy",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "app:*"
+      }
+    },
+    "deploy:prod": {
+      "command": "npm run deploy",
+      "env": {
+        "NODE_ENV": "production",
+        "DEBUG": "app:*"
+      }
+    }
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "dependencies": {
+    "axios": "^0.17.1"
+  },
+  "devDependencies": {
+    "mockjs": "^1.0.1-beta3"
+  }
+}
